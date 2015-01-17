@@ -65,9 +65,7 @@ angular.module('angular-flipclock', [])
         });
 
         //generate clock object
-        clock = new FlipClock(element, { interval: function () {
-          alert('in')
-        }});
+        clock = new FlipClock(element, options);
 
         //bind methods to the scope
         methods.forEach(function(method) {
