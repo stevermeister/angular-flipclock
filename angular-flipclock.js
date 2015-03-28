@@ -14,7 +14,9 @@ angular.module('angular-flipclock', [])
           'clockFace', // (string) This is the name of the clock that is used to build the clock display. The default value is HourlyCounter.
           'defaultclockface', //(string) This is the default clock face to use if the defined clock face does not exist. The default value is HourlyCounter.
           'defaultlanguage' //(string) This is the default langauge to use. The default value is english.
-        ], options = {},
+        ], options = {
+          callbacks: {}
+        },
           clock,
           methods = [
             'start', //This method will start the clock just call the .start() method on an FlipClock object.
@@ -58,7 +60,7 @@ angular.module('angular-flipclock', [])
         //init callbacks
         callbacks.forEach(function(callback) {
           if(attr[callback]){
-            options[callback] = function(){
+            options.callbacks[callback] = function(){
               $parse(attr[callback])(scope);
             }
           }
