@@ -1,5 +1,5 @@
 angular.module('angular-flipclock', [])
-  .directive('flipClock', function($parse) {
+  .directive('flipClock', ["$parse", function($parse) {
     return {
       replace: true,
       template: '<div></div>',
@@ -77,4 +77,4 @@ angular.module('angular-flipclock', [])
         });
       }
     }
-  });
+  }]);
