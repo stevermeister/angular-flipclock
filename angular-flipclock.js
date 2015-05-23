@@ -67,7 +67,7 @@ angular.module('angular-flipclock', [])
         });
 
         //generate clock object
-        clock = new $.fn.FlipClock(element, options);
+        clock = element.FlipClock(options);
 
         //bind methods to the scope
         methods.forEach(function(method) {
