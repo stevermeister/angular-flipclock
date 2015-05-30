@@ -1,5 +1,5 @@
 angular.module('angular-flipclock', [])
-  .directive('flipClock', ["$parse", function($parse) {
+  .directive('flipClock', function($parse) {
     return {
       replace: true,
       template: '<div></div>',
@@ -67,9 +67,7 @@ angular.module('angular-flipclock', [])
         });
 
         //generate clock object
-        clock = element.FlipClock(options);
-
-        scope.clock = clock;
+        clock = new FlipClock(element, options);
 
         //bind methods to the scope
         methods.forEach(function(method) {
@@ -79,4 +77,4 @@ angular.module('angular-flipclock', [])
         });
       }
     }
-  }]);
+  });
