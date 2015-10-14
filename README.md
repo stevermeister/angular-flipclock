@@ -11,6 +11,10 @@ Example with start/stop callbacks - http://jsfiddle.net/STEVER/4tdxw3km/
 
 ##Installation
 
-Install from bower: 
+Install from npm: 
+
+    npm install angular-flipclock
+
+or from bower: 
 
     bower install angular-flipclock
