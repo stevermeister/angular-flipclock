@@ -13,9 +13,8 @@
     "FlipClock"
   ],
   "license": "MIT",
-  "main": "angular-flipclock.js",
   "dependencies": {
     "FlipClock": "~0.7.7",
-    "angularjs": "~1.3.9"
+    "angular": "~1.3.9"
   }
 }
