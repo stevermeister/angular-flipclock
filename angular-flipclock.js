@@ -73,7 +73,7 @@ angular.module('angular-flipclock', [])
         //bind methods to the scope
         methods.forEach(function(method) {
           scope[method] = function(){
-            clock[method].apply(clock, arguments);
+            return clock[method].apply(clock, arguments);
           }
         });
       }
