@@ -14,6 +14,7 @@ angular.module('angular-flipclock', [])
           'clockFace', // (string) This is the name of the clock that is used to build the clock display. The default value is HourlyCounter.
           'defaultclockface', //(string) This is the default clock face to use if the defined clock face does not exist. The default value is HourlyCounter.
           'defaultlanguage' //(string) This is the default langauge to use. The default value is english.
+          'time', // Default time to set to the clock
         ], options = {
           callbacks: {}
         },
@@ -66,9 +67,15 @@ angular.module('angular-flipclock', [])
           }
         });
 
+        if (typeof(attr['time']) === 'undefined') {
+          attr['time'] = null;
+        } else {
+          console.log(attr['time'])
+        }
+
         //generate clock object
         //clock = new FlipClock(element, options);
-        clock = element.FlipClock(options);
+        clock = element.FlipClock(attr.time, options);
 
         //bind methods to the scope
         methods.forEach(function(method) {
