@@ -13,8 +13,8 @@ angular.module('angular-flipclock', [])
           'classes',   //(object) This is an object of CSS classes to use to append to DOM objects
           'clockFace', // (string) This is the name of the clock that is used to build the clock display. The default value is HourlyCounter.
           'defaultclockface', //(string) This is the default clock face to use if the defined clock face does not exist. The default value is HourlyCounter.
-          'defaultlanguage' //(string) This is the default langauge to use. The default value is english.
-          'time', // Default time to set to the clock
+          'defaultlanguage', //(string) This is the default langauge to use. The default value is english.
+          'time' // Default time to set to the clock
         ], options = {
           callbacks: {}
         },
